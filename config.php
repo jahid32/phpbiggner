@@ -6,6 +6,6 @@ return [
     'port' => 3306,
     'dbname' => 'jffphp',
     'charset' => 'utf8mb4'
-  ]
+  ],
   
 ];

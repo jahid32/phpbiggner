@@ -1,5 +1,3 @@
 <?php
 
-
-$heading = "About US";
-include 'views/about.view.php';
+view('index.view.php', ['heading' => "About Us"]);
