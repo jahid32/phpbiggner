@@ -1,7 +1,8 @@
 <?php
 
-class Response {
+namespace Core;
 
-  const NOT_FOUND = 404;
-  const FORBIDDEN = 403;
+class Response {
+    const NOT_FOUND = 404;
+    const FORBIDDEN = 403;
 }
