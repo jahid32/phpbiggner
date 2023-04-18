@@ -15,4 +15,8 @@ class Validator
     {
         return filter_var($value, FILTER_VALIDATE_EMAIL);
     }
+    public static function password($db_pass, $input_pass)
+    {
+        return $db_pass === password_hash($input_pass, PASSWORD_BCRYPT) ;
+    }
 }
