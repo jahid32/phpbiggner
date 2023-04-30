@@ -3,6 +3,7 @@
 use Core\App;
 use Core\Database;
 use Core\Validator;
+use Core\Authenticator;
 
 $email = $_POST['email'];
 $password = $_POST['password'];
@@ -38,9 +39,8 @@ if($user) {
     ]);
 
     // mark that the user has logged in
-    login([
-        'email' => $email
-    ]);
+    $auth = new Authenticator();
+    $auth->attempt($email, $password);
     header('location: /');
     exit();
 }
